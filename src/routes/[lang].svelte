@@ -48,6 +48,8 @@
 	import SvelteSeo from 'svelte-seo';
 	import FeaturedMatchWidget from '$lib/components/featured_match/_FeaturedMatch_Widget.svelte';
 
+	import { userBetarenaSettings } from '$lib/store/user-settings';
+
 	export let FEATURED_MATCH_WIDGET_DATA_SEO;
 
 
@@ -154,31 +156,57 @@
 	<!-- ... 3rd ROW ... -->
 	<FeaturedMatchWidget {FEATURED_MATCH_WIDGET_DATA_SEO} />
 
+	<!-- ... widget-options ... -->
 	<div>
-		<p class='s-16 w-500'> 
-			TRANSLATIONS 
-		</p>
 		<!-- ... widget-language-example ... -->
-		<ul>
-			<!-- ... spanish ... -->
-			<li class='m-b-15'>
-				<a sveltekit:prefetch 
-					href="/es">
-					<p class='s-16'>
-						ES
-					</p>
-				</a>
-			</li>
-			<!-- ... italian ... -->
-			<li class='m-b-15'>
-				<a sveltekit:prefetch 
-					href="/it">
-					<p class='s-16'>
-						IT
-					</p>
-				</a>
-			</li>
-		</ul>
+		<div>
+			<p class='m-b-15 s-16 w-500'> 
+				TRANSLATIONS 
+			</p>
+			<ul>
+				<!-- ... english ... -->
+				<li class='m-b-15'>
+					<a sveltekit:prefetch 
+						href="/">
+						<p class='s-16'>
+							EN
+						</p>
+					</a>
+				</li>
+				<!-- ... spanish ... -->
+				<li class='m-b-15'>
+					<a sveltekit:prefetch 
+						href="/es">
+						<p class='s-16'>
+							ES
+						</p>
+					</a>
+				</li>
+				<!-- ... italian ... -->
+				<li class='m-b-15'>
+					<a sveltekit:prefetch 
+						href="/it">
+						<p class='s-16'>
+							IT
+						</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- ... widget-dark-mode-exaple ... -->
+		<div>
+			<p class='m-b-15 s-16 w-500'> 
+				DARK MODE 
+			</p>
+			<button class='m-b-15'
+				on:click={() => $userBetarenaSettings.theme = 'Dark'}>
+				DARK-MODE
+			</button>
+			<button class='m-b-15'
+				on:click={() => $userBetarenaSettings.theme = 'Light'}>
+				LIGHT-MODE
+			</button>
+		</div>
 	</div>
 
 </section>

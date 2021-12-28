@@ -1,12 +1,18 @@
-![example workflow](https://github.com/Betarena/scores/actions/workflows/docker-image.yml/badge.svg)
-
 # scores
 
-### Betarena Scores Platform
+### Betarena Scores Platform - FEATURED MATCH WIDGET
+
+![betarena-loading-2](https://user-images.githubusercontent.com/20924663/147516122-e1cff549-9e84-4a88-a910-1c866baa4fab.gif)
+
+### Features
+
+-[x] Darkmode
+-[x] Real-time Data from DB
+-[x] Minimal Library Use
 
 ### About
 
-We are building the first open-source live results and statistics platform with community involvement features for data insertion. The project includes a blockchain component that will allow participants to receive rewards based on their participation and also to stake the future Token of the platform.
+This is a `public` repository for the `featured_match` widget for the `Betarena - Platform`.
 
 ### Developing
 
@@ -28,10 +34,6 @@ npm run build
 ```
 
 > You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
-
-### SEO Optimization
-
-This porject is optimized using the `svelte-seo` plugin library [here](https://github.com/artiebits/svelte-seo#svelte-seo-options)
 
 ### GraphQL Support
 
